@@ -1,5 +1,8 @@
 name: learn-github-actions
-on: [push]
+on:
+  # Triggers the workflow every 5 minutes
+  schedule:
+    - cron: "*/5 * * * *"
 jobs:
   check-bats-version:
     runs-on: ubuntu-latest
